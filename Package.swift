@@ -21,10 +21,12 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "gt3-ios-cocoapods-support",
-            dependencies: []),
+            dependencies: [],
+            path: "Sources"),
         .testTarget(
             name: "gt3-ios-cocoapods-supportTests",
-            dependencies: ["gt3-ios-cocoapods-support"]),
+            dependencies: ["gt3-ios-cocoapods-support"],
+            path: "Tests"),
     ],
     swiftLanguageVersions: [.v4]
 )
